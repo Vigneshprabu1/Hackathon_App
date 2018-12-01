@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#2352f9</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="com_facebook_likeboxcountview_text_color">#ff6a7180</color>
+    <color name="text_color_pink">#ff4c4787</color>
+    <color name="error_message_color">#ffff2474</color>
+    <color name="purple_3">#ff7c72e6</color>
+    <color name="white">#ffffffff</color>
+    <color name="text_color">#292929</color>
+    <color name="gray_3">#ff9b9b9b</color>
+    <color name="linkTextColor">#ff7c72e6</color>
+    <color name="gray_1">#ff4a4a4a</color>
+    <color name="gray_2">#ff616161</color>
+    <color name="gray_4">#ffffffff</color>
+    <color name="gray_5">#ffcccccc</color>
+    <color name="purple_6">#fffafbff</color>
+</resources>

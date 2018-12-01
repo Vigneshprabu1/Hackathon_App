@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.ss4.hackathons.AddProfileImage"
+        android:background="#fafafa">
+
+        <RelativeLayout android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray_1"
+                android:gravity="center"
+                android:id="@+id/headerView"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Add Profile Photo"
+                android:layout_centerHorizontal="true" />
+
+
+
+
+        </RelativeLayout>
+
+        <View android:id="@+id/viewShadow"
+            android:background="#80e6e6e6"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/header" />
+
+        <ScrollView android:id="@+id/ScrollView01"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fillViewport="true"
+            android:layout_below="@id/viewShadow"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout android:id="@+id/profileImageRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView android:id="@+id/imageViewLogo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/profile_pic"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="uploadButton"/>
+
+                <RelativeLayout android:id="@+id/rltemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewLogo"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/gray_2"
+                        android:gravity="center"
+                        android:id="@+id/textViewGetMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Add a photo to your profile to help others recognize you. To add your photo ckick the above image."
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:gravity="center_horizontal"
+                    android:id="@+id/newUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@id/rltemp">
+
+                    <TextView android:textSize="16sp"
+                        android:id="@+id/txtNewUsers"
+                        android:textColor="@color/gray_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="If you want to skip upload your photo? " />
+
+                    <TextView android:textSize="16sp"
+                        android:textColor="#579ce6"
+                        android:id="@+id/txtRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click Here"
+                        android:onClick="skipUploadImage"
+                        android:layout_toRightOf="@id/txtNewUsers" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/textViewContinue"
+                android:background="#579ce6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Submit"
+                android:onClick="profileImageUploadContinue"/>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/pleaseWaitRelativeLayout"
+            android:background="#cc4a4a4a"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView android:id="@+id/imageView10"
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <TextView android:textSize="18sp"
+                android:textColor="@color/white"
+                android:id="@+id/pleaseWait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="sfdfsd"
+                android:layout_below="@+id/imageView10"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Hackathons</string>
+    <string name="primary_mobile_number_for_Login">ENTER PRIMARY MOBILE NUMBER</string>
+    <string name="continue_word">Continue</string>
+    <string name="terms_condition">terms and conditions</string>
+    <string name="title_activity_mobile_verification">MobileVerification</string>
+    <string name="title_activity_select_location">SelectLocation</string>
+    <string name="submit">Submit</string>
+    <string name="spinner_title">Choose your specialization</string>
+    <string name="todo">TODO</string>
+    <string name="register">Register</string>
+    <string name="click_here">Click here</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="are_you_new">Are you new?</string>
+    <string name="login">Login</string>
+    <string name="your_password">Your password</string>
+    <string name="your_email_id">Your email id</string>
+</resources>

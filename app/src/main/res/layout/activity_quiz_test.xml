@@ -1,0 +1,2837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ss4.hackathons.QuizTest"
+    android:background="#f0f2f4"
+    >
+
+    <ImageView android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hack"
+        android:background="#bcbcbc"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:onClick="redirectToURL"
+        tools:ignore="OnClick" />
+    <View android:id="@+id/logoShadow"
+        android:background="#80fcfbfb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/logo" />
+
+    <TextView android:textSize="17sp"
+        android:textStyle="normal"
+        android:textColor="#fdfdfd"
+        android:gravity="center"
+        android:id="@+id/textViewCreateBasicData"
+        android:background="#589de6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Hackathon Quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logoShadow"/>
+
+    <View android:id="@+id/viewShadow"
+        android:background="#80e6e6e6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/textViewCreateBasicData" />
+
+    <ScrollView android:id="@+id/profileScrollView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:fillViewport="true"
+        android:layout_above="@+id/relativeLayoutContinue"
+        android:layout_below="@+id/viewShadow"
+        android:layout_centerVertical="true"
+        >
+
+        <RelativeLayout android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp"
+            >
+
+            <RelativeLayout android:id="@id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView android:textSize="16sp"
+                    android:id="@+id/logintxtTerms2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time :" />
+                <TextView android:textSize="16sp"
+                    android:textColor="#0368d6"
+                    android:id="@+id/quizTimeLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="00:00"
+                    android:layout_toRightOf="@id/logintxtTerms2" />
+
+            </RelativeLayout>
+
+            <LinearLayout android:id="@+id/linearLayoutForQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/relativeLayout2"
+                android:background="@drawable/property_list_item_unselected"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question1LinearLayoutForMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table1ForMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo1ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ColanForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion1ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question1ForMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion1ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion1ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion1ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion1ForMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion1ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion1ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion1ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion1ForMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question1LinearLayoutForImageWithMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table1ForImageWithMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo1ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ColanForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion1ForImageWithMultipleChoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:background="#bcbcbc"
+                                    android:paddingTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion1ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question1ForImageWithMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion1ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion1ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion1ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion1ForImageWithMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion1ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion1ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion1ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion1ForImageWithMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question1LinearLayoutForImageWithFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:id="@+id/table1ForImageWithFillInTheBlanks"
+                        android:layout_weight="1"
+                      >
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo1ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ColanForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion1ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion1ForImageWithFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion1ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question1LinearLayoutForImageWithTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table1ForImageWithTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo1ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ColanForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion1ForImageWithTrueOrFalse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion1ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question1ForImageWithTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion1ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion1ForImageWithTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion1ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion1ForImageWithTrueOrFalse"/>
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question1LinearLayoutForTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table1ForTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo1ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ColanForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion1ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question1ForTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion1ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion1ForTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion1ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion1ForTrueOrFalse"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question1LinearLayoutForFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table1ForFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo1ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ColanForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion1ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion1ForFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion1ForFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearLayoutForQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/linearLayoutForQuestion1"
+                android:background="@drawable/property_list_item_unselected"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question2LinearLayoutForMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table2ForMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo2ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="1"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ColanForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion2ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question2ForMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion2ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion2ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion2ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion2ForMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion2ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion2ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion2ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion2ForMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question2LinearLayoutForImageWithMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table2ForImageWithMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo2ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="2"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ColanForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <ImageView android:id="@+id/txtquestion2ForImageWithMultipleChoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:scaleType="fitXY"
+                                />
+
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion2ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question2ForImageWithMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion2ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion2ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion2ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion2ForImageWithMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion2ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion2ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion2ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion2ForImageWithMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question2LinearLayoutForImageWithFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table2ForImageWithFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo2ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="2"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ColanForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion2ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion2ForImageWithFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion2ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question2LinearLayoutForImageWithTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table2ForImageWithTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo2ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="2"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ColanForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion2ForImageWithTrueOrFalse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion2ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question2ForImageWithTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion2ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion2ForImageWithTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion2ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion2ForImageWithTrueOrFalse"/>
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question2LinearLayoutForTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table2ForTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo2ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="2"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ColanForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion2ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question2ForTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion2ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion2ForTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion2ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion2ForTrueOrFalse"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question2LinearLayoutForFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table2ForFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo2ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="2"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ColanForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion2ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion2ForFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion2ForFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearLayoutForQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/linearLayoutForQuestion2"
+                android:background="@drawable/property_list_item_unselected"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question3LinearLayoutForMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table3ForMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo3ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="3"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ColanForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion3ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question3ForMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion3ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion3ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion3ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion3ForMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion3ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion3ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion3ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion3ForMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question3LinearLayoutForImageWithMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table3ForImageWithMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo3ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="3"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ColanForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion3ForImageWithMultipleChoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion3ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question3ForImageWithMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion3ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion3ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion3ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion3ForImageWithMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion3ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion3ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion3ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion3ForImageWithMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question3LinearLayoutForImageWithFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table3ForImageWithFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo3ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="3"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ColanForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <ImageView android:id="@+id/txtquestion3ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion3ForImageWithFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion3ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question3LinearLayoutForImageWithTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table3ForImageWithTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo3ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="3"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ColanForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion3ForImageWithTrueOrFalse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                android:scaleType="fitXY"
+                                />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion3ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question3ForImageWithTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion3ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion3ForImageWithTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion3ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion3ForImageWithTrueOrFalse"/>
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question3LinearLayoutForTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table3ForTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo3ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="3"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ColanForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion3ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question3ForTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion3ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion3ForTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion3ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion3ForTrueOrFalse"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question3LinearLayoutForFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table3ForFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo3ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="3"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ColanForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion3ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion3ForFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion3ForFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearLayoutForQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/linearLayoutForQuestion3"
+                android:background="@drawable/property_list_item_unselected"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question4LinearLayoutForMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table4ForMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo4ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="4"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ColanForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion4ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question4ForMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion4ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuizQuestion4ForMultipleChoice"
+                                tools:ignore="OnClick" />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion4ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuizQuestion4ForMultipleChoice"
+                                tools:ignore="OnClick" />
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion4ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuizQuestion4ForMultipleChoice"
+                                tools:ignore="OnClick" />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion4ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuizQuestion4ForMultipleChoice"
+                                tools:ignore="OnClick" />
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question4LinearLayoutForImageWithMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table4ForImageWithMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo4ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="4"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ColanForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion4ForImageWithMultipleChoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion4ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question4ForImageWithMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion4ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion4ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion4ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion4ForImageWithMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion4ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion4ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion4ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion4ForImageWithMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question4LinearLayoutForImageWithFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table4ForImageWithFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo4ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="4"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ColanForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion4ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+
+                            </LinearLayout>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion4ForImageWithFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion4ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question4LinearLayoutForImageWithTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table4ForImageWithTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo4ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="4"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ColanForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion4ForImageWithTrueOrFalse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion4ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question4ForImageWithTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion4ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion4ForImageWithTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion4ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion4ForImageWithTrueOrFalse"/>
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question4LinearLayoutForTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table4ForTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo4ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="4"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ColanForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion4ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question4ForTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion4ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion4ForTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion4ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion4ForTrueOrFalse"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question4LinearLayoutForFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table4ForFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo4ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="4"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ColanForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion4ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion4ForFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion4ForFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/linearLayoutForQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/linearLayoutForQuestion4"
+                android:background="@drawable/property_list_item_unselected"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question5LinearLayoutForMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table5ForMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo5ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="5"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ColanForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion5ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question5ForMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion5ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion5ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion5ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion5ForMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion5ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion5ForMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion5ForMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion5ForMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question5LinearLayoutForImageWithMultipleChoice"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table5ForImageWithMultipleChoice"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo5ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="5"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ColanForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion5ForImageWithMultipleChoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion5ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question5ForImageWithMultipleChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion5ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer1"
+                                android:onClick="onRadioButtonClickedQuestion5ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion5ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer2"
+                                android:onClick="onRadioButtonClickedQuestion5ForImageWithMultipleChoice"/>
+
+                            <RadioButton
+                                android:id="@+id/ans3ForQuizQuestion5ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer3"
+                                android:onClick="onRadioButtonClickedQuestion5ForImageWithMultipleChoice"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans4ForQuizQuestion5ForImageWithMultipleChoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Answer4"
+                                android:onClick="onRadioButtonClickedQuestion5ForImageWithMultipleChoice"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question5LinearLayoutForImageWithFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table5ForImageWithFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo5ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="5"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ColanForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion5ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ForImageWithFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion5ForImageWithFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion5ForImageWithFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question5LinearLayoutForImageWithTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table5ForImageWithTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo5ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="5"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ColanForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView android:id="@+id/txtquestion5ForImageWithTrueOrFalse"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="350dp"
+                                    android:scaleType="fitXY"
+                                    />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/txtAnswerQuestion5ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/question5ForImageWithTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion5ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion5ForImageWithTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion5ForImageWithTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion5ForImageWithTrueOrFalse"/>
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/Question5LinearLayoutForTrueOrFalse"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table5ForTrueOrFalse"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo5ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="5"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ColanForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtquestion5ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Question 1"
+                                android:gravity="left"/>
+                        </TableRow>
+
+                        <RadioGroup
+                            android:id="@+id/question5ForTrueOrFalse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp">
+
+                            <RadioButton
+                                android:id="@+id/ans1ForQuizQuestion5ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="True"
+                                android:onClick="onRadioButtonClickedQuestion5ForTrueOrFalse"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/ans2ForQuizQuestion5ForTrueOrFalse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="False"
+                                android:onClick="onRadioButtonClickedQuestion5ForTrueOrFalse"/>
+
+                        </RadioGroup>
+
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:id="@+id/Question5LinearLayoutForFillInTheBlanks"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/table5ForFillInTheBlanks"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/txtQuestionNo5ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="5"/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ColanForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="."/>
+
+                            <TextView
+                                android:id="@+id/txtQuestion5ForFillInTheBlanks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text="Answer the above question?"/>
+
+                        </TableRow>
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            >
+
+
+
+                            <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="20dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtAnswerQuestion5ForFillInTheBlanks"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="left"
+                                    android:text="Answer :"/>
+
+                                <EditText
+                                    android:id="@+id/txtAnswerForQuestion5ForFillInTheBlanks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:gravity="right"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </TableLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/linearLayoutForQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_below="@+id/linearLayoutForQuestion5"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginTop="20dp"
+
+                    >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        >
+                        <TableRow>
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text=""/>
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:gravity="left"
+                                android:text=""/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@+id/loginrelativeLayoutContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loginView"
+        android:layout_centerHorizontal="true">
+
+        <TextView android:textSize="21sp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/loginTextViewContinue"
+            android:background="#579ce6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Submit"
+            android:onClick="submitTest"/>
+    </RelativeLayout>
+    <View android:id="@+id/loginView"
+        android:background="#0152a9"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true" />
+    <RelativeLayout android:id="@+id/loginPleaseWaitRelativeLayout"
+        android:background="#cc4a4a4a"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView android:id="@+id/loginImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        <TextView android:textSize="18sp"
+            android:textColor="@color/white"
+            android:id="@+id/loginPleaseWait"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:text="sfdfsd"
+            android:layout_below="@id/loginImageView"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

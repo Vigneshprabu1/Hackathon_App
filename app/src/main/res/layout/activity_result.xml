@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.ss4.hackathons.Result"
+android:background="#f0f2f4"
+    >
+
+<ImageView android:id="@+id/logo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/hack"
+    android:background="#bcbcbc"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:onClick="redirectToURL"
+    />
+<View android:id="@+id/logoShadow"
+    android:background="#80fcfbfb"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@id/logo" />
+
+<TextView android:textSize="21sp"
+    android:textStyle="bold"
+    android:textColor="#fdfdfd"
+    android:gravity="center"
+    android:id="@+id/textViewHeading"
+    android:background="#589de6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="Winner"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/logoShadow"/>
+
+<View android:id="@+id/viewShadow"
+    android:background="#80e6e6e6"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:layout_below="@id/textViewHeading" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayoutWinner"
+        android:layout_below="@id/viewShadow">
+
+        <TextView android:textSize="17sp"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:id="@+id/winner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="loginContinue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/linearLayoutWinner">
+
+        <TextView android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#fdfdfd"
+            android:gravity="center"
+            android:id="@+id/headingRunner"
+            android:background="#589de6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Runner"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/logoShadow"/>
+
+        <!-- Editext for Search -->
+        <EditText android:id="@+id/inputSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Search"
+            android:inputType="textVisiblePassword"/>
+
+        <!-- List View -->
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>
+

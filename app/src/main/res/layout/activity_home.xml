@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:background="#f0f2f4"
+    >
+
+    <ImageView android:id="@+id/logoIcon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/icon"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentTop="true" />
+
+    <ImageView android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hack"
+        android:background="#bcbcbc"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/logoIcon"
+       />
+    <View android:id="@+id/logoShadow"
+        android:background="#80fcfbfb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/logo" />
+
+    <TextView android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#fdfdfd"
+        android:gravity="center"
+        android:id="@+id/textViewHeading"
+        android:background="#589de6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logoShadow"/>
+
+    <View android:id="@+id/viewShadow"
+        android:background="#80e6e6e6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/textViewHeading" />
+
+    <ScrollView android:id="@+id/profileScrollView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:fillViewport="true"
+        android:layout_above="@+id/relativeLayoutContinue"
+        android:layout_below="@+id/viewShadow"
+        android:layout_centerVertical="true"
+        >
+
+        <RelativeLayout android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp">
+
+            <RelativeLayout android:id="@id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+               >
+
+
+                <TextView android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#589de6"
+                    android:gravity="center"
+                    android:id="@+id/logout"
+                    android:background="@drawable/property_list_item_unselected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Logout"
+                    android:onClick="logout"/>
+
+                <ImageView android:id="@+id/quizAddImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/sponsor"
+                    android:background="#dedede"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_below="@+id/logout"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/loginTextViewContinue"
+                    android:background="#579ce6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone"
+                    android:text="Start Hackathon Quiz"
+                    android:layout_below="@+id/quizAddImage"
+                    android:onClick="startQuiz"/>
+
+                <TextView android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#117ecb"
+                    android:gravity="center"
+                    android:id="@+id/hackathonResultDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:layout_below="@+id/loginTextViewContinue"
+                    />
+
+                <TextView android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/viewResult"
+                    android:background="#579ce6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone"
+                    android:text="View Previous Result"
+                    android:layout_below="@+id/hackathonResultDate"
+                    android:onClick="viewResult"/>
+
+
+                <TextView android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#666666"
+                    android:gravity="center"
+                    android:id="@+id/nextHackathon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Next Hackathon Date"
+                    android:layout_below="@+id/viewResult"
+                    />
+
+                <TextView android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#117ecb"
+                    android:gravity="center"
+                    android:id="@+id/nextHackathonDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Will announce soon, keep in touch to won next hackathon"
+                    android:layout_below="@+id/nextHackathon"
+                   />
+
+                <TextView android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#117ecb"
+                    android:gravity="center"
+                    android:id="@+id/nextHackathonDate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/nextHackathonDate"
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <View android:id="@+id/view"
+        android:background="#FF6A6A6B"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
+
